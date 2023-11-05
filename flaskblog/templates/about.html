@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h2><a class="mr-2" href="#">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.doc_title }}</p>
+            </div>
+              <div class="article-metadata">
+                <h2><a class="mr-2" href="#">{{ post.title2 }}</a></h2>
+                <p class="article-content">{{ post.doc_title2 }}</p>
+                <p class="article-content">{{ post.doc_title2_1 }}</p>
+                <p class="article-content">{{ post.doc_title2_2 }}</p>
+                <p class="article-content">{{ post.doc_title2_3 }}</p>
+                <p class="article-content">{{ post.doc_title2_4 }}</p>
+              </div>
+                <div>
+                    <div class="article-metadata">
+                    <h2><a class="mr-2" href="#">{{ post.title3 }}</a></h2>
+                    <p class="article-content">{{ post.doc_title3 }}</p>
+                </div>
+                    <h2><a class="mr-2" href="#">{{ post.title4 }}</a></h2>
+                    <p class="article-content">{{ post.doc_title4 }}</p>
+                    {% for post in posts %}
+                        <article class="media content-section">
+                            <p class="article-content">{{ post.doc_title4_1 }}</p>
+                        </article>
+                  {% endfor %}
+                </div>
+        </article>
+    {% endfor %}
+{% endblock %}
